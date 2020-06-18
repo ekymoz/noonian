@@ -78,19 +78,7 @@ neuralNetWork = function(lr = 0.05, scaleWeight = {min:-1,max:1}, fn = 'sigmoid'
       }
     }
 
-    if (show) {
-      for (var i=0; i< 10;i++) {
-          document.getElementById('view'+i).style.backgroundColor = "#fff";
-      }
-
-      for (var i=0; i< 10;i++) {
-        if (this.layers[this.layers.length-1].neurons[i].output > 0.85) {
-          document.getElementById('view'+i).style.backgroundColor = "#08d";
-        }
-        document.getElementById('view'+i).innerHTML = this.layers[this.layers.length-1].neurons[i].output.toFixed(2);
-
-      }
-    }
+    //this.layers[l].neurons[n].output between 0-1 : ex => 0.85
   }
 
   // inputs / targets [[1,2,3], [4,7,8], [...]]
